@@ -16,6 +16,8 @@ app.post('/api/set_time',(req,res)=>{
 })
 app.get('/api/time_match',(req,res)=>{
     console.log(obj)
+    console.log(moment().hours())
+    console.log(moment().minutes())
     if(moment().hours()==obj.horas&&moment().minutes()==obj.minutos){
         res.status(200).send(true)
     }else{
